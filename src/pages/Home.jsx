@@ -16,7 +16,7 @@ const Home = () => {
         <>
             <div className='home-container'>
                 <div className="video-container">
-                    <video autoPlay loop muted className="background-video">
+                    <video autoPlay loop muted playsInline disablePictureInPicture controls={false} onContextMenu={(e) => e.preventDefault()} className="background-video">
                         <source src={background} type="video/mp4" />
                     </video>
 
