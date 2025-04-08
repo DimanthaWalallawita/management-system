@@ -5,10 +5,13 @@ import { ArrowRightOutlined, EllipsisOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const leftRef = useRef(null);
     const rightRef = useRef(null);
+
+    const navigate = useNavigate();
 
     const isLeftInView = useInView(leftRef, { once: true, margin: "-100px" });
     const isRightInView = useInView(rightRef, { once: true, margin: "-100px" });
@@ -27,8 +30,8 @@ const Home = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <h1 style={{ color: '#fff', fontSize: '42px' }}>Task Management System</h1>
-                        <h2 style={{ color: '#1ABC9C', fontSize: '24px' }}>Micro Frontend Architecture</h2>
+                        <h1 className='overlay-topic'>Task Management System</h1>
+                        <h2 className='overlay-subtopic'>Micro Frontend Architecture</h2>
                     </motion.div>
                 </div>
 
@@ -47,6 +50,7 @@ const Home = () => {
                             type="link"
                             size="small"
                             style={{ marginTop: '20px', padding: '0px', backgroundColor: '#1ABC9C', color: 'white', padding: '3px' }}
+                            onClick={() => {navigate('/login')}}
                         >
                             Get Started <ArrowRightOutlined />
                         </Button>

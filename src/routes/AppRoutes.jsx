@@ -8,6 +8,9 @@ import VerificationOtp from "../pages/VerificationOtp.jsx";
 import Success from "../pages/Success.jsx";
 import UserDashboard from "../pages/UserDashboard.jsx";
 import AdminLogin from "../pages/AdminLogin.jsx";
+import ForgotPassword from "../pages/ForgotPassword.jsx";
+import PasswordOtp from "../pages/PasswordOtp.jsx";
+import ChangePassword from "../pages/ChangePassword.jsx";
 
 const AppRoutes = () => {
     return (
@@ -21,6 +24,9 @@ const AppRoutes = () => {
                 <Route path="/success" element={<Success/>}/>
                 <Route path="/user" element={<UserDashboard/>} />
                 <Route path="/admin_login" element={<AdminLogin />} />
+                <Route path="/forgot_password" element={<ForgotPassword/>} />
+                <Route path="/passwordOtp" element={<PasswordOtp />} />
+                <Route path="/change_password" element={<ChangePassword />} />
             </Routes>
         </Suspense>
     );

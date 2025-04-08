@@ -50,7 +50,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 style={{ marginBottom: 10 }}
             />
-            <h5 style={{marginTop: '10px', marginBottom: '10px', cursor: 'pointer'}}>Forget Password?</h5>
+            <h5 className="forget-password" onClick={() => {navigate("/forgot_password")}}>Forget Password?</h5>
             <Button style={{backgroundColor: '#1ABC9C'}} type="primary" block onClick={handleLogin} loading={loading}>
                 Login
             </Button>
