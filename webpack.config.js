@@ -1,9 +1,13 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const dotenv = require('dotenv');
+const webpack = require('webpack'); // <-- Add this import
 
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const dependencies = require("./package.json").dependencies;
+
+dotenv.config();
 
 module.exports = {
   entry: "./src/index.js",
@@ -44,7 +48,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-    },
+      },
     ],
   },
   name: "shell",
@@ -54,6 +58,9 @@ module.exports = {
       filename: "index.html",
     }),
     new MiniCssExtractPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_GOOGLEMAPS_API_KEY': JSON.stringify(process.env.REACT_APP_GOOGLEMAPS_API_KEY)
+    }),
     new ModuleFederationPlugin({
       name: "shell",
       filename: "remoteEntry.js",

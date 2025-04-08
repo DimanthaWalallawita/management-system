@@ -40,6 +40,7 @@ const UserDashboard = () => {
     }
 
     if (!userDetails) {
+        localStorage.clear();
         window.location.href = '/login';
         return <div>User not found or not authenticated.</div>;
     }

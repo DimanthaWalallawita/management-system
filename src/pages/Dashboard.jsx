@@ -16,6 +16,7 @@ const Dashboard = () => {
 
             if (!adminToken) {
                 message.error("Please log in first");
+                localStorage.clear();
                 window.location.href = '/admin_login';
             }
 
@@ -42,6 +43,7 @@ const Dashboard = () => {
     }
 
     if (!adminDetails) {
+        localStorage.clear();
         window.location.href = '/admin_login';
         return <div>Admin not found or not authenticated.</div>;
     }
