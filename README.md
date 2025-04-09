@@ -55,5 +55,18 @@ Ensure you have the following installed on your system:
 5. Once port is started, in your browser search below link:<br/>
         👉http://localhost:3009/
 
+6. Firstly create Admin Using Postman:<br/>
+        👉Postman collection file is in the repository.<br/>
+        👉Import postman file into your workspace.<br/>
+        👉Find "Admin Register" post request and create admin.<br/>
+        👉Pass request body as a JSON file.<br/>
+        ({<br/>
+            "name": "Thihara",<br/>
+            "email": "walallawitat@gmail.com",<br/>
+            "password": "thihara123"<br/>
+        })
+
+7. Admin Login Page - http://localhost:3009/admin_login
+
 ## other
 Running Port : 3009
