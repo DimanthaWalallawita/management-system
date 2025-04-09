@@ -32,7 +32,7 @@ Ensure you have the following installed on your system:
    git clone https://github.com/DimanthaWalallawita/management-system
 
 
-### Option 02
+#### Option 02
 1. Visit to this below link:
         https://github.com/DimanthaWalallawita/management-system
 
