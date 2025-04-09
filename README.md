@@ -41,19 +41,19 @@ Ensure you have the following installed on your system:
 
 ## Run
 1. Navigate to the project directory and install the necessary dependencies:<br/>
-        cd management-system<br/>
-        npm install
+        👉cd management-system<br/>
+        👉npm install
 
 2. Once the dependencies are installed, start the development server:<br/>
-        npm start
+        👉npm start
 
 3. Create .env file in your main directory
 
 4. Inside .env file add your Google Map API:<br/>
-        REACT_APP_GOOGLEMAPS_API_KEY="Goodle Map API"
+        👉REACT_APP_GOOGLEMAPS_API_KEY="Goodle Map API"
 
 5. Once port is started, in your browser search below link:<br/>
-        http://localhost:3009/
+        👉http://localhost:3009/
 
 ## other
 Running Port : 3009
