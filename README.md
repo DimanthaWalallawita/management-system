@@ -40,7 +40,7 @@ Ensure you have the following installed on your system:
 3. Click on clone button.
 
 ## Run
-1. Navigate to the project directory and install the necessary dependencies:
+1. Navigate to the project directory and install the necessary dependencies:<br/>
         cd management-system
         npm install
 
