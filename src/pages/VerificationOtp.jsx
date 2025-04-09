@@ -41,18 +41,6 @@ const VerificationOtp = () => {
     };
 
     return (
-        // <div>
-        //     <h1>Enter OTP</h1>
-        //     <input
-        //         type="text"
-        //         placeholder="Enter OTP"
-        //         value={otp}
-        //         onChange={(e) => setOtp(e.target.value)}
-        //         required
-        //     />
-        //     <button onClick={handleSubmit}>Submit</button>
-        // </div>
-
         <Card title="OTP Verification" style={{ width: 300, margin: "auto", marginTop: 50 }}>
             <Input
                 placeholder="Enter OTP Number"
