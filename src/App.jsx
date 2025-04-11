@@ -14,16 +14,6 @@ function App() {
   return (
     <Router>
       <Layout>
-        {/* <Header>
-          <Menu theme="dark" mode="horizontal">
-            <Menu.Item key="home">
-              <a href="/">Home</a>
-            </Menu.Item>
-            <Menu.Item key="login">
-              <a href="/login">Login</a>
-            </Menu.Item>
-          </Menu>
-        </Header> */}
         <Navbar />
 
         <Content style={{ padding: "0px" }}>

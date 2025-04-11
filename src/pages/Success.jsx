@@ -6,17 +6,15 @@ import { Card, Form, Input, Button, message } from "antd";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
-// Static variable for libraries
 const libraries = ["places"];
 
 const Success = () => {
     const inputref = useRef(null);
 
-    // Ensure libraries are static and passed outside the component to avoid warning
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: process.env.REACT_APP_GOOGLEMAPS_API_KEY,
-        libraries // Pass the static `libraries` variable
+        libraries
     });
 
     const [userData, setUserData] = useState({
@@ -24,7 +22,7 @@ const Success = () => {
         lastName: "",
         email: "",
         mobileNumber: "",
-        address: "", // Make sure this is initialized as empty
+        address: "",
         password: "",
         confirmPassword: "",
     });
@@ -51,12 +49,10 @@ const Success = () => {
         const places = inputref.current.getPlaces();
         if (places && places[0]) {
             const address = places[0].formatted_address;
-            console.log("Selected Address:", address); // Debugging log
+            console.log("Selected Address:", address);
 
-            // Update the address in userData state
             setUserData((prevState) => ({ ...prevState, address }));
 
-            // Update the address field in the form using setFieldsValue
             form.setFieldsValue({ address });
         }
     };
@@ -77,7 +73,7 @@ const Success = () => {
                 lastName: values.lastName,
                 email: values.email,
                 mobileNumber: values.mobileNumber,
-                address: values.address, // Ensure full address is passed here
+                address: values.address,
                 password: values.password,
                 role: "User",
             });
@@ -87,7 +83,7 @@ const Success = () => {
                 lastName: values.lastName,
                 email: values.email,
                 mobileNumber: values.mobileNumber,
-                address: values.address, // Ensure full address is passed to the backend
+                address: values.address,
                 password: values.password,
                 role: "User",
             });
