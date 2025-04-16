@@ -63,7 +63,7 @@ const Success = () => {
 
     const handleSubmit = async (values) => {
         if (values.password !== values.confirmPassword) {
-            message.error("Passwords do not match!");
+            message.error("Passwords is not matched!");
             return;
         }
 
