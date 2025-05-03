@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const dotenv = require('dotenv');
-const webpack = require('webpack'); // <-- Add this import
+const webpack = require('webpack');
 
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const dependencies = require("./package.json").dependencies;
